@@ -1,0 +1,1817 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://danielgtaylor.github.io/nesh/">nesh (v1.7.0)</a>
+</h1>
+<h4>An enhanced, extensible shell for Node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh">module nesh</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.init">
+            function <span class="apidocSignatureSpan">nesh.</span>init
+            <span class="apidocSignatureSpan">(autoload, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.languages">
+            function <span class="apidocSignatureSpan">nesh.</span>languages
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.loadLanguage">
+            function <span class="apidocSignatureSpan">nesh.</span>loadLanguage
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.loadPlugin">
+            function <span class="apidocSignatureSpan">nesh.</span>loadPlugin
+            <span class="apidocSignatureSpan">(plugin, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.start">
+            function <span class="apidocSignatureSpan">nesh.</span>start
+            <span class="apidocSignatureSpan">(opts, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>autoload</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>babel</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>builtins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>coffee</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>compile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>defaults</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>eval</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>history</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>log</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>plugins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>require</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nesh.</span>welcome</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.autoload">module nesh.autoload</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.autoload.setup">
+            function <span class="apidocSignatureSpan">nesh.autoload.</span>setup
+            <span class="apidocSignatureSpan">(context, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.autoload.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.autoload.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.babel">module nesh.babel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.babel.setup">
+            function <span class="apidocSignatureSpan">nesh.babel.</span>setup
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.builtins">module nesh.builtins</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.builtins.postStart">
+            function <span class="apidocSignatureSpan">nesh.builtins.</span>postStart
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.builtins.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.builtins.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.coffee">module nesh.coffee</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.coffee.setup">
+            function <span class="apidocSignatureSpan">nesh.coffee.</span>setup
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.config">module nesh.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.config.get">
+            function <span class="apidocSignatureSpan">nesh.config.</span>get
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.config.load">
+            function <span class="apidocSignatureSpan">nesh.config.</span>load
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.config.reset">
+            function <span class="apidocSignatureSpan">nesh.config.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.config.save">
+            function <span class="apidocSignatureSpan">nesh.config.</span>save
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.config.</span>home</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.config.</span>path</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.eval">module nesh.eval</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.eval.postStart">
+            function <span class="apidocSignatureSpan">nesh.eval.</span>postStart
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.eval.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.eval.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.history">module nesh.history</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.history.postStart">
+            function <span class="apidocSignatureSpan">nesh.history.</span>postStart
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.history.setup">
+            function <span class="apidocSignatureSpan">nesh.history.</span>setup
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.history.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.history.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.log">module nesh.log</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">nesh.log.</span>colors</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.log">
+            function <span class="apidocSignatureSpan">nesh.</span>log
+            <span class="apidocSignatureSpan">(level, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.debug">
+            function <span class="apidocSignatureSpan">nesh.log.</span>debug
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.error">
+            function <span class="apidocSignatureSpan">nesh.log.</span>error
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.info">
+            function <span class="apidocSignatureSpan">nesh.log.</span>info
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.levelName">
+            function <span class="apidocSignatureSpan">nesh.log.</span>levelName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.test">
+            function <span class="apidocSignatureSpan">nesh.log.</span>test
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.warn">
+            function <span class="apidocSignatureSpan">nesh.log.</span>warn
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.log.winston">
+            function <span class="apidocSignatureSpan">nesh.log.</span>winston
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nesh.log.</span>DEBUG</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nesh.log.</span>ERROR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nesh.log.</span>INFO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nesh.log.</span>WARN</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">nesh.log.</span>level</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.require">module nesh.require</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.require.postStart">
+            function <span class="apidocSignatureSpan">nesh.require.</span>postStart
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.require.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.require.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.version">module nesh.version</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.version.postStart">
+            function <span class="apidocSignatureSpan">nesh.version.</span>postStart
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.version.setup">
+            function <span class="apidocSignatureSpan">nesh.version.</span>setup
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.version.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.version.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nesh.welcome">module nesh.welcome</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.welcome.preStart">
+            function <span class="apidocSignatureSpan">nesh.welcome.</span>preStart
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nesh.welcome.setup">
+            function <span class="apidocSignatureSpan">nesh.welcome.</span>setup
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.welcome.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">nesh.welcome.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh" id="apidoc.module.nesh">module nesh</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.init" id="apidoc.element.nesh.init">
+        function <span class="apidocSignatureSpan">nesh.</span>init
+        <span class="apidocSignatureSpan">(autoload, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (autoload, callback) {
+  if (autoload == null) {
+    autoload = true;
+  }
+  initialized = true;
+  if (autoload) {
+    return nesh.loadPlugin('autoload', function(err) {
+      if (err) {
+        return typeof callback === "function" ? callback("[autoload] " + err) : void 0;
+      } else {
+        return typeof callback === "function" ? callback() : void 0;
+      }
+    });
+  } else {
+    return typeof callback === "function" ? callback() : void 0;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      results.push(evalScript);
+    }
+    return results;
+  })();
+  opts.evalData = evalScripts.join(";\n");
+}
+
+nesh.<span class="apidocCodeKeywordSpan">init</span>(true, function(err) {
+  var i, len, plugin, ref;
+  if (err) {
+    return nesh.log.error(err);
+  }
+  if (argv.plugins) {
+    ref = nesh.plugins;
+    for (i = 0, len = ref.length; i &lt; len; i++) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.languages" id="apidoc.element.nesh.languages">
+        function <span class="apidocSignatureSpan">nesh.</span>languages
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">languages = function () {
+  return fs.readdirSync(__dirname + "/languages").filter(function(item) {
+    return item.slice(-2) === 'js';
+  }).map(function(item) {
+    return item.split('.').slice(0, -1).join('.');
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (argv.v) {
+  nesh.log.info("nesh version " + nesh.version);
+  return;
+}
+
+if (argv['list-languages']) {
+  nesh.log.info(nesh.<span class="apidocCodeKeywordSpan">languages</span>().join(', '));
+  return;
+}
+
+if (argv.verbose) {
+  nesh.log.level = nesh.log.DEBUG;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.loadLanguage" id="apidoc.element.nesh.loadLanguage">
+        function <span class="apidocSignatureSpan">nesh.</span>loadLanguage
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadLanguage = function (data) {
+  switch (typeof data) {
+    case 'function':
+      return data({
+        nesh: nesh
+      });
+    case 'string':
+      return require("./languages/" + data).setup({
+        nesh: nesh
+      });
+    default:
+      throw new Error("Data must be a function or string! Received " + data);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (argv.b) {
+  argv.lang = 'babel';
+}
+
+if (argv.lang) {
+  nesh.<span class="apidocCodeKeywordSpan">loadLanguage</span>(argv.lang);
+}
+
+opts = {};
+
+if (argv.prompt != null) {
+  opts.prompt = argv.prompt;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.loadPlugin" id="apidoc.element.nesh.loadPlugin">
+        function <span class="apidocSignatureSpan">nesh.</span>loadPlugin
+        <span class="apidocSignatureSpan">(plugin, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadPlugin = function (plugin, callback) {
+  var e, name, prefix;
+  if (typeof plugin === 'string') {
+    name = plugin;
+    try {
+      plugin = require("./plugins/" + name);
+    } catch (error) {
+      e = error;
+      try {
+        prefix = path.join(nesh.config.home, '.nesh_modules', 'node_modules');
+        plugin = require(path.join(prefix, name));
+      } catch (error) {
+        e = error;
+        return callback("Could not find plugin '" + name + "': " + e + "!");
+      }
+    }
+    if (plugin.name == null) {
+      plugin.name = name;
+    }
+    if (plugin.description == null) {
+      plugin.description = 'No description';
+    }
+  }
+  nesh.plugins.push(plugin);
+  if (plugin.setup) {
+    return callPluginMethod(plugin.setup, {
+      nesh: nesh
+    }, callback);
+  } else {
+    return callback();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+completed = 0;
+already_errored = false;
+results = [];
+for (i = 0, len = defaultPlugins.length; i &lt; len; i++) {
+  plugin = defaultPlugins[i];
+  results.push((function(plugin) {
+    nesh.log.debug("Loading plugin " + plugin);
+    return nesh.<span class="apidocCodeKeywordSpan">loadPlugin</span>(plugin, function(err) {
+      if (err) {
+        if (!already_errored) {
+          next("Error loading plugin " + plugin + ": " + err);
+        }
+        return already_errored = true;
+      } else {
+        completed += 1;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.start" id="apidoc.element.nesh.start">
+        function <span class="apidocSignatureSpan">nesh.</span>start
+        <span class="apidocSignatureSpan">(opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (opts, callback) {
+  if (opts == null) {
+    opts = {};
+  }
+  if (!initialized) {
+    return nesh.init(true, function(err) {
+      if (err) {
+        return typeof callback === "function" ? callback(err) : void 0;
+      }
+      return start(opts, callback);
+    });
+  } else {
+    return start(opts, callback);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      ref = nesh.plugins;
+      for (i = 0, len = ref.length; i &lt; len; i++) {
+        plugin = ref[i];
+        nesh.log.info((plugin.name + ": ") + ("" + plugin.description).grey);
+      }
+      return;
+    }
+    return nesh.<span class="apidocCodeKeywordSpan">start</span>(opts, function(err) {
+      if (err) {
+        return nesh.log.error(err);
+      }
+    });
+  });
+
+}).call(this);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.autoload" id="apidoc.module.nesh.autoload">module nesh.autoload</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.autoload.setup" id="apidoc.element.nesh.autoload.setup">
+        function <span class="apidocSignatureSpan">nesh.autoload.</span>setup
+        <span class="apidocSignatureSpan">(context, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (context, next) {
+  var already_errored, completed, config, defaultPlugins, defaults, i, len, plugin, results;
+  defaults = context.nesh.defaults;
+  nesh.log.debug('Loading plugin autoload');
+  defaultPlugins = ['builtins', 'eval', 'history', 'version', 'welcome', 'require', 'doc'];
+  config = nesh.config.get();
+  if (config.plugins != null) {
+    defaultPlugins = _(defaultPlugins.concat(config.plugins)).uniq();
+  }
+  if (config.pluginsExclude != null) {
+    defaultPlugins = _(defaultPlugins).reject(function(item) {
+      return indexOf.call(config.pluginsExclude, item) &gt;= 0;
+    });
+  }
+  if (defaults.plugins == null) {
+    defaults.plugins = defaultPlugins;
+  }
+  completed = 0;
+  already_errored = false;
+  results = [];
+  for (i = 0, len = defaultPlugins.length; i &lt; len; i++) {
+    plugin = defaultPlugins[i];
+    results.push((function(plugin) {
+      nesh.log.debug("Loading plugin " + plugin);
+      return nesh.loadPlugin(plugin, function(err) {
+        if (err) {
+          if (!already_errored) {
+            next("Error loading plugin " + plugin + ": " + err);
+          }
+          return already_errored = true;
+        } else {
+          completed += 1;
+          if (completed &gt;= defaultPlugins.length) {
+            return next();
+          }
+        }
+      });
+    })(plugin));
+  }
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.babel" id="apidoc.module.nesh.babel">module nesh.babel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.babel.setup" id="apidoc.element.nesh.babel.setup">
+        function <span class="apidocSignatureSpan">nesh.babel.</span>setup
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (arg) {
+  var nesh;
+  nesh = arg.nesh;
+  log.debug('Loading Babel');
+  require('babel-core/register');
+  nesh.compile = function(data) {
+    return babel.transform(data);
+  };
+  nesh.repl = {
+    start: function(opts) {
+      var repl;
+      opts["eval"] = function(code, context, filename, callback) {
+        var e, err, output, result;
+        if (code[0] === '(' &amp;&amp; code[code.length - 1] === ')') {
+          code = code.slice(1, -1);
+        }
+        err = null;
+        output = null;
+        try {
+          result = babel.transform(code, {
+            stage: 0
+          });
+          output = vm.runInThisContext(result.code, {
+            filename: filename
+          });
+        } catch (error) {
+          e = error;
+          err = e;
+        }
+        if (output === 'use strict') {
+          output = void 0;
+        }
+        return callback(err, output);
+      };
+      return repl = require('repl').start(opts);
+    }
+  };
+  process.versions['babel'] = babel.version;
+  nesh.defaults.welcome = ("Babel " + babel.version + " on Node " + process.version + "\nType ") + '.help'.cyan + ' for more information
+';
+  nesh.defaults.prompt = 'babel&gt; ';
+  nesh.defaults.useGlobal = true;
+  return nesh.defaults.historyFile = path.join(nesh.config.home, '.babel_history');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.builtins" id="apidoc.module.nesh.builtins">module nesh.builtins</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.builtins.postStart" id="apidoc.element.nesh.builtins.postStart">
+        function <span class="apidocSignatureSpan">nesh.builtins.</span>postStart
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postStart = function (context) {
+  var cmd, repl;
+  repl = context.repl;
+
+<span class="apidocCodeCommentSpan">  /*
+  Underscore utilities, see:
+  http://documentcloud.github.io/underscore
+   */
+</span>  repl.context.__ = _;
+
+  /*
+  Hashing functions
+   */
+  repl.context.md5 = function(value) {
+    return crypto.createHash('md5').update(value).digest('hex');
+  };
+  repl.context.sha = function(value) {
+    return crypto.createHash('sha1').update(value).digest('hex');
+  };
+
+  /*
+  Random functions
+   */
+  repl.context.rand = function(start, end) {
+    if (start == null) {
+      start = 0;
+      end = 1;
+    } else if (end == null) {
+      end = start;
+      start = 0;
+    }
+    return Math.random() * (end - start) + start;
+  };
+  repl.context.randInt = function(start, end) {
+    return Math.round(repl.context.rand(start, end));
+  };
+  repl.context.randChoices = function(choices, length) {
+    var result;
+    if (length == null) {
+      length = 1;
+    }
+    result = [];
+    while (--length &gt;= 0) {
+      result.push(choices[Math.floor(Math.random() * choices.length)]);
+    }
+    return result;
+  };
+  repl.context.randString = function(length, charSet) {
+    if (charSet == null) {
+      charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    }
+    return repl.context.randChoices(charSet.split(''), length).join('');
+  };
+  repl.context.randHex = function(length) {
+    return repl.context.randString(length, 'abcdef0123456789');
+  };
+
+  /*
+  Number representation shortcuts
+   */
+  repl.context.bin = function(val) {
+    return val.toString(2);
+  };
+  repl.context.oct = function(val) {
+    return val.toString(8);
+  };
+  repl.context.hex = function(val) {
+    return val.toString(16);
+  };
+
+  /*
+  URL encoding / decoding
+   */
+  repl.context.querystring = querystring;
+  repl.context.urlenc = querystring.escape;
+  repl.context.urldec = querystring.unescape;
+
+  /*
+  REPL Commands
+   */
+  cmd = {
+    help: 'Clear the screen',
+    action: function() {
+      repl.outputStream.write('\u001B[2J\u001B[0;0f');
+      return repl.displayPrompt();
+    }
+  };
+  return repl.defineCommand('cls', cmd);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.coffee" id="apidoc.module.nesh.coffee">module nesh.coffee</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.coffee.setup" id="apidoc.element.nesh.coffee.setup">
+        function <span class="apidocSignatureSpan">nesh.coffee.</span>setup
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (context) {
+  var nesh;
+  nesh = context.nesh;
+  log.debug('Loading CoffeeScript');
+  nesh.compile = function(data) {
+    return coffee.compile(data, {
+      bare: true,
+      header: false
+    });
+  };
+  nesh.repl = require('coffee-script/lib/coffee-script/repl');
+  process.versions['coffee-script'] = coffee.VERSION;
+  nesh.defaults.welcome = ("CoffeeScript " + coffee.VERSION + " on Node " + process.version + "\nType ") + '.help'.cyan + ' for
+more information';
+  nesh.defaults.prompt = 'coffee&gt; ';
+  nesh.defaults.useGlobal = semver.satisfies(coffee.VERSION, "&gt; 1.6.3");
+  if (!nesh.defaults.useGlobal) {
+    log.warn('Warning: inherited global context requires CoffeeScript &gt; 1.6.3');
+    log.warn('         packages that modify built-in prototypes may not work');
+  }
+  return nesh.defaults.historyFile = path.join(nesh.config.home, '.coffee_history');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.config" id="apidoc.module.nesh.config">module nesh.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.config.get" id="apidoc.element.nesh.config.get">
+        function <span class="apidocSignatureSpan">nesh.config.</span>get
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function () {
+  return _config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  exec("npm --prefix=" + prefix + " --color=always install " + (install.join(' ')) + " 2&gt;
+;&amp;1", function(err, stdout) {
+    nesh.log.info(stdout);
+    if (err) {
+      throw err;
+    }
+  });
+}
+config = nesh.config.<span class="apidocCodeKeywordSpan">get</span>();
+if (config.plugins == null) {
+  config.plugins = [];
+}
+config.plugins = _(config.plugins.concat(enabled)).uniq();
+if (config.pluginsExclude == null) {
+  config.pluginsExclude = [];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.config.load" id="apidoc.element.nesh.config.load">
+        function <span class="apidocSignatureSpan">nesh.config.</span>load
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (path) {
+  var e;
+  if (path == null) {
+    path = config.path;
+  }
+  if (fs.existsSync(path)) {
+    log.debug("Loading config from " + path);
+    try {
+      return _config = require(path);
+    } catch (error) {
+      e = error;
+      throw "Error loading Nesh config from " + path + ": " + e;
+    }
+  } else {
+    return log.debug("No config found at " + path);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return;
+}
+
+if (argv.verbose) {
+  nesh.log.level = nesh.log.DEBUG;
+}
+
+nesh.config.<span class="apidocCodeKeywordSpan">load</span>();
+
+if (argv.enable) {
+  enabled = argv.enable.split(',');
+  install = enabled.filter(function(item) {
+    return !fs.existsSync("./plugins/" + item + ".js");
+  });
+  prefix = path.join(nesh.config.home, '.nesh_modules');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.config.reset" id="apidoc.element.nesh.config.reset">
+        function <span class="apidocSignatureSpan">nesh.config.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+  return _config = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.config.save" id="apidoc.element.nesh.config.save">
+        function <span class="apidocSignatureSpan">nesh.config.</span>save
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (path) {
+  if (path == null) {
+    path = config.path;
+  }
+  return fs.writeFileSync(path, JSON.stringify(_config));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  config.plugins = _(config.plugins.concat(enabled)).uniq();
+  if (config.pluginsExclude == null) {
+    config.pluginsExclude = [];
+  }
+  config.pluginsExclude = _(config.pluginsExclude).reject(function(item) {
+    return indexOf.call(enabled, item) &gt;= 0;
+  });
+  nesh.config.<span class="apidocCodeKeywordSpan">save</span>();
+}
+
+if (argv.disable) {
+  disabled = argv.disable.split(',');
+  prefix = path.join(nesh.config.home, '.nesh_modules');
+  uninstall = disabled.filter(function(item) {
+    return fs.existsSync(path.join(prefix, 'node_modules', item));
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.eval" id="apidoc.module.nesh.eval">module nesh.eval</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.eval.postStart" id="apidoc.element.nesh.eval.postStart">
+        function <span class="apidocSignatureSpan">nesh.eval.</span>postStart
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postStart = function (context) {
+  var repl;
+  repl = context.repl;
+  if (repl.opts.evalData) {
+    log.debug('Evaluating code in the REPL');
+    if (global === repl.context) {
+      return vm.runInThisContext(repl.opts.evalData);
+    } else {
+      return vm.runInContext(repl.opts.evalData, repl.context);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.history" id="apidoc.module.nesh.history">module nesh.history</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.history.postStart" id="apidoc.element.nesh.history.postStart">
+        function <span class="apidocSignatureSpan">nesh.history.</span>postStart
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postStart = function (context) {
+  var buffer, cmd, fd, lastLine, maxSize, readFd, repl, size, stat;
+  repl = context.repl;
+  if (!repl.opts.historyFile) {
+    return;
+  }
+  if (repl.commands['.history']) {
+    return;
+  }
+  maxSize = repl.opts.historyMaxInputSize;
+  lastLine = null;
+  try {
+    stat = fs.statSync(repl.opts.historyFile);
+    size = Math.min(maxSize, stat.size);
+    readFd = fs.openSync(repl.opts.historyFile, 'r');
+    buffer = new Buffer(size);
+    fs.readSync(readFd, buffer, 0, size, stat.size - size);
+    repl.rli.history = buffer.toString().split('\n').reverse();
+    if (stat.size &gt; maxSize) {
+      repl.rli.history.pop();
+    }
+    if (repl.rli.history[0] === '') {
+      repl.rli.history.shift();
+    }
+    repl.rli.historyIndex = -1;
+    lastLine = repl.rli.history[0];
+  } catch (error) {}
+  fd = fs.openSync(repl.opts.historyFile, 'a');
+  repl.rli.addListener('line', function(code) {
+    if (code &amp;&amp; code.length &amp;&amp; code !== '.history' &amp;&amp; lastLine !== code) {
+      fs.write(fd, code + "\n", function() {});
+      return lastLine = code;
+    }
+  });
+  repl.rli.on('exit', function() {
+    return fs.close(fd, function() {});
+  });
+  cmd = {
+    help: 'Show command history',
+    action: function() {
+      repl.outputStream.write((repl.rli.history.slice(0).reverse().join('\n')) + "\n");
+      return repl.displayPrompt();
+    }
+  };
+  return repl.defineCommand('history', cmd);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.history.setup" id="apidoc.element.nesh.history.setup">
+        function <span class="apidocSignatureSpan">nesh.history.</span>setup
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (context) {
+  var config, defaults, ref;
+  ref = context.nesh, defaults = ref.defaults, config = ref.config;
+  if (defaults.historyFile == null) {
+    defaults.historyFile = path.join(config.home, '.node_history');
+  }
+  return defaults.historyMaxInputSize != null ? defaults.historyMaxInputSize : defaults.historyMaxInputSize = 10240;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.log" id="apidoc.module.nesh.log">module nesh.log</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.log" id="apidoc.element.nesh.log.log">
+        function <span class="apidocSignatureSpan">nesh.</span>log
+        <span class="apidocSignatureSpan">(level, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (level, msg) {
+  if (level &lt;= logger.level) {
+    return console.log(msg);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.debug" id="apidoc.element.nesh.log.debug">
+        function <span class="apidocSignatureSpan">nesh.log.</span>debug
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (msg) {
+  return logger.log(logger.DEBUG, logger.colors ? msg.grey : msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var i, len, results;
+  results = [];
+  for (i = 0, len = evalArgs.length; i &lt; len; i++) {
+    evalArg = evalArgs[i];
+    isJs = false;
+    evalScript = fs.existsSync(evalArg) ? (isJs = evalArg.slice(-3) === '.js', fs.readFileSync(evalArg, 'utf-8'
+;)) : evalArg;
+    if (!isJs &amp;&amp; nesh.compile) {
+      nesh.log.<span class="apidocCodeKeywordSpan">debug</span>('Compiling eval data');
+      evalScript = nesh.compile(evalScript);
+    }
+    results.push(evalScript);
+  }
+  return results;
+})();
+opts.evalData = evalScripts.join(";\n");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.error" id="apidoc.element.nesh.log.error">
+        function <span class="apidocSignatureSpan">nesh.log.</span>error
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (msg) {
+  return logger.log(logger.ERROR, logger.colors ? msg.red : msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  })();
+  opts.evalData = evalScripts.join(";\n");
+}
+
+nesh.init(true, function(err) {
+  var i, len, plugin, ref;
+  if (err) {
+    return nesh.log.<span class="apidocCodeKeywordSpan">error</span>(err);
+  }
+  if (argv.plugins) {
+    ref = nesh.plugins;
+    for (i = 0, len = ref.length; i &lt; len; i++) {
+      plugin = ref[i];
+      nesh.log.info((plugin.name + ": ") + ("" + plugin.description).grey);
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.info" id="apidoc.element.nesh.log.info">
+        function <span class="apidocSignatureSpan">nesh.log.</span>info
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (msg) {
+  return logger.log(logger.INFO, msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (argv.h) {
+  optimist.showHelp();
+  return;
+}
+
+if (argv.v) {
+  nesh.log.<span class="apidocCodeKeywordSpan">info</span>("nesh version " + nesh.version);
+  return;
+}
+
+if (argv['list-languages']) {
+  nesh.log.info(nesh.languages().join(', '));
+  return;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.levelName" id="apidoc.element.nesh.log.levelName">
+        function <span class="apidocSignatureSpan">nesh.log.</span>levelName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">levelName = function () {
+  var names;
+  names = {};
+  names[logger.DEBUG] = 'debug';
+  names[logger.INFO] = 'info';
+  names[logger.WARN] = 'warn';
+  names[logger.ERROR] = 'error';
+  return names[logger.level];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.test" id="apidoc.element.nesh.log.test">
+        function <span class="apidocSignatureSpan">nesh.log.</span>test
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">test = function () {
+  logger.colors = false;
+  logger.output = '';
+  logger.level = logger.DEBUG;
+  return logger.log = function(level, message) {
+    if (level &lt;= logger.level) {
+      return logger.output += message;
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+action = function(m) {
+  var c, capNext, e, e2, expanded, i, len, ok, tokens, vName;
+  if (m.trim().length === 0) {
+    displayUsage(repl);
+    return;
+  }
+  if (/^[\.\/]+$/.<span class="apidocCodeKeywordSpan">test</span>(m)) {
+    m = fs.realpathSync(process.cwd() + "/" + m);
+  }
+  tokens = m.split(/\s+/);
+  if (tokens.length &gt; 2) {
+    displayUsage(repl);
+    return;
+  } else if (tokens.length === 2) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.warn" id="apidoc.element.nesh.log.warn">
+        function <span class="apidocSignatureSpan">nesh.log.</span>warn
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (msg) {
+  return logger.log(logger.WARN, logger.colors ? msg.yellow : msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    };
+    nesh.repl = require('coffee-script/lib/coffee-script/repl');
+    process.versions['coffee-script'] = coffee.VERSION;
+    nesh.defaults.welcome = ("CoffeeScript " + coffee.VERSION + " on Node " + process.version + "\nType
+ ") + '.help'.cyan + ' for more information';
+    nesh.defaults.prompt = 'coffee&gt; ';
+    nesh.defaults.useGlobal = semver.satisfies(coffee.VERSION, "&gt; 1.6.3");
+    if (!nesh.defaults.useGlobal) {
+      log.<span class="apidocCodeKeywordSpan">warn</span>('Warning: inherited global context requires CoffeeScript &gt; 1
+.6.3');
+      log.warn('         packages that modify built-in prototypes may not work');
+    }
+    return nesh.defaults.historyFile = path.join(nesh.config.home, '.coffee_history');
+  };
+
+}).call(this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.log.winston" id="apidoc.element.nesh.log.winston">
+        function <span class="apidocSignatureSpan">nesh.log.</span>winston
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">winston = function () {
+  var winston;
+  winston = require('winston');
+  logger.colors = false;
+  return logger.log = function(level, msg) {
+    if (level &lt;= logger.level) {
+      return winston[logger.levelName()](msg);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.require" id="apidoc.module.nesh.require">module nesh.require</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.require.postStart" id="apidoc.element.nesh.require.postStart">
+        function <span class="apidocSignatureSpan">nesh.require.</span>postStart
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postStart = function (context) {
+  var action, exec, repl;
+  repl = context.repl;
+  exec = function(s) {
+    if (repl.useGlobal) {
+      return vm.runInThisContext(s);
+    } else {
+      return vm.runInContext(s, repl.context);
+    }
+  };
+  action = function(m) {
+    var c, capNext, e, e2, expanded, i, len, ok, tokens, vName;
+    if (m.trim().length === 0) {
+      displayUsage(repl);
+      return;
+    }
+    if (/^[\.\/]+$/.test(m)) {
+      m = fs.realpathSync(process.cwd() + "/" + m);
+    }
+    tokens = m.split(/\s+/);
+    if (tokens.length &gt; 2) {
+      displayUsage(repl);
+      return;
+    } else if (tokens.length === 2) {
+      vName = tokens[1];
+      m = tokens[0];
+    } else {
+      vName = "";
+      capNext = false;
+      for (i = 0, len = m.length; i &lt; len; i++) {
+        c = m[i];
+        if (c === '/') {
+          vName = "";
+        } else if (c === '-') {
+          capNext = true;
+        } else if (c === '.') {
+
+        } else {
+          if (capNext) {
+            vName += c.toUpperCase();
+          } else {
+            vName += c;
+          }
+          capNext = false;
+        }
+      }
+    }
+    expanded = vName + " = require(" + (JSON.stringify(m)) + ")";
+    repl.outputStream.write(colors.green(expanded + "\n"));
+    ok = true;
+    try {
+      exec(expanded);
+    } catch (error) {
+      e = error;
+      ok = false;
+      try {
+        if (m.slice(0, 2) !== "./") {
+          action("./" + m);
+        } else {
+          throw e;
+        }
+      } catch (error) {
+        e2 = error;
+        ok = false;
+        repl.outputStream.write(colors.red(".require: " + e + "\n"));
+      }
+    }
+    repl.displayPrompt();
+    if (ok &amp;&amp; optimist.argv['require-echo'] !== false) {
+      return repl.rli.write(vName);
+    }
+  };
+  return repl.defineCommand('require', {
+    help: "Require a module and assign it to a variable with the same name",
+    action: action
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.version" id="apidoc.module.nesh.version">module nesh.version</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.version.postStart" id="apidoc.element.nesh.version.postStart">
+        function <span class="apidocSignatureSpan">nesh.version.</span>postStart
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postStart = function (context) {
+  var cmd, repl;
+  repl = context.repl;
+  cmd = {
+    help: 'Show Node version information',
+    action: function() {
+      var key, value, versions;
+      versions = ((function() {
+        var ref, results;
+        ref = process.versions;
+        results = [];
+        for (key in ref) {
+          value = ref[key];
+          results.push(key + " " + value);
+        }
+        return results;
+      })()).join('\n');
+      repl.outputStream.write(versions + "\n");
+      return repl.displayPrompt();
+    }
+  };
+  return repl.defineCommand('versions', cmd);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.version.setup" id="apidoc.element.nesh.version.setup">
+        function <span class="apidocSignatureSpan">nesh.version.</span>setup
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (context) {
+  return process.versions.nesh = nesh.version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nesh.welcome" id="apidoc.module.nesh.welcome">module nesh.welcome</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.welcome.preStart" id="apidoc.element.nesh.welcome.preStart">
+        function <span class="apidocSignatureSpan">nesh.welcome.</span>preStart
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preStart = function (context) {
+  var options, outStream;
+  options = context.options;
+  if (options.welcome) {
+    outStream = options.outputStream || process.stdout;
+    return outStream.write(options.welcome + "\n");
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nesh.welcome.setup" id="apidoc.element.nesh.welcome.setup">
+        function <span class="apidocSignatureSpan">nesh.welcome.</span>setup
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (context) {
+  var defaults;
+  defaults = context.nesh.defaults;
+  return defaults.welcome != null ? defaults.welcome : defaults.welcome = ("Node " + process.version + "\nType ") + ".help".cyan
+ + " for more information";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
